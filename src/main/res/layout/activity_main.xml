@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginStart="10dp"
+    android:background="@color/backgroundColor"
+    tools:context="com.example.coputing.tipcalculator.MainActivity">
+
+    <!-- Bill Amount -->
+    <EditText
+        android:id="@+id/editText_BillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_marginTop="10dp"
+        android:layout_row="0"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="6"
+        android:padding="@dimen/padding_textView_default"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:id="@+id/textView_BillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_row="0"
+        android:background="@color/backgroundBillAmount"
+        android:hint="@string/textView_billAmountHint"
+        android:labelFor="@+id/editText_BillAmount"
+        android:padding="@dimen/padding_textView_default"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textSize="24sp" />
+
+    <!-- Seek Bar -->
+
+    <TextView
+        android:id="@+id/textView_tipAmountPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_marginTop="10dp"
+        android:layout_row="1"
+        android:padding="@dimen/padding_textView_default"
+        android:text="@string/tipPercentage"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textSize="@dimen/textView_textSize_default" />
+    <!-- **NOTES***
+        >   android:layout_marginStart is the same as android:layout_marginStart
+             but you need both, with one of them it gives you an error
+
+     -->
+
+    <SeekBar
+        android:id="@+id/seekBar_tipAmount"
+        android:layout_width="310dp"
+        android:layout_column="1"
+        android:layout_marginTop="12dp"
+        android:layout_row="1"
+        android:max="30"
+        android:padding="@dimen/padding_textView_default"
+        android:progress="15"
+
+
+        />
+
+    <!-- Total Tip -->
+    <TextView
+        android:id="@+id/textView_totalTipAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_marginTop="10dp"
+        android:layout_row="2"
+        android:padding="@dimen/padding_textView_default"
+        android:text="@string/tipLabel"
+        android:textSize="@dimen/textView_textSize_default"
+
+
+        />
+
+    <TextView
+        android:id="@+id/textView_totalTipAmountDisplay"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_row="2"
+        android:background="@color/backgroundBillAmount"
+        android:padding="@dimen/padding_textView_default"
+        android:text="@string/total_tip_amount"
+        android:textAlignment="center"
+        android:textSize="@dimen/textView_textSize_default"
+
+        />
+
+    <!-- Total Amount -->
+    <TextView
+        android:id="@+id/textView_totalAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_row="3"
+        android:padding="@dimen/padding_textView_default"
+        android:text="@string/totalLabel"
+        android:textSize="@dimen/textView_textSize_default"
+
+
+        />
+
+    <TextView
+        android:id="@+id/textView_totalAmountDisplay"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_row="3"
+        android:background="@color/backgroundBillAmount"
+        android:padding="@dimen/padding_textView_default"
+        android:text="@string/total_tip_amount"
+        android:textAlignment="center"
+        android:textSize="@dimen/textView_textSize_default"
+
+        />
+
+
+</GridLayout>
